@@ -93,7 +93,7 @@ class Records {
         removeButton = new JButton("Remove a Record");
         removeButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                removeRecord();
+                showRemoveRecord();
             }
         });
 
@@ -115,6 +115,7 @@ class Records {
         updateTextArea();
 
         frame.setVisible(true);
+        frame.setLocationRelativeTo(null);
     }
 
     public void showAddRecordWindow() {
@@ -192,8 +193,12 @@ class Records {
 
         addFrame.add(buttonPanel, BorderLayout.SOUTH);
 
+        // Set the window location to the center of the screen
+        addFrame.setLocationRelativeTo(null);
+
         addFrame.setVisible(true);
     }
+
 
     public boolean addRecord() {
         String name=nameField.getText().trim();
@@ -231,9 +236,10 @@ class Records {
         JOptionPane.showMessageDialog(addFrame,"Record added.");
 
         return true;
+
     }
 
-    public void removeRecord() {
+    public void showRemoveRecord() {
         if(records.size()==0){
             JOptionPane.showMessageDialog(frame,"No records to remove.");
             return;
@@ -292,6 +298,7 @@ class Records {
         removeFrame.add(buttonPanel, BorderLayout.SOUTH);
 
         removeFrame.setVisible(true);
+        frame.setLocationRelativeTo(null);
     }
 
     private boolean removeRecord(String name) {

@@ -32,7 +32,7 @@ public class Login {
         c.gridx = 1;
         c.gridy = 0;
         c.anchor = GridBagConstraints.LINE_START;
-        usernameField = new JTextField("", 20);
+        usernameField = new JTextField("", 10);
         panel.add(usernameField, c);
         c.gridx = 0;
         c.gridy = 1;
@@ -41,7 +41,7 @@ public class Login {
         c.gridx = 1;
         c.gridy = 1;
         c.anchor = GridBagConstraints.LINE_START;
-        passwordField = new JPasswordField("", 20);
+        passwordField = new JPasswordField("", 10);
         panel.add(passwordField, c);
         c.gridx = 0;
         c.gridy = 2;
